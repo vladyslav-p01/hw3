@@ -1,0 +1,16 @@
+{
+    "name": "root/hw3.com",
+    "authors": [
+        {
+            "name": "Vladyslav",
+            "email": "vladyslav.p01@gmail.com"
+        }
+    ],
+  "autoload": {
+    "psr-4": {
+      "Devices\\": "src/Devices"
+    }
+  },
+    "minimum-stability": "stable",
+    "require": {}
+}
