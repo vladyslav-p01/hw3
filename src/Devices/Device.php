@@ -1,13 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: user
- * Date: 22.10.15
- * Time: 21:21
- */
-
 namespace Devices;
-
 
 class Device extends AbstractDevice
 {
@@ -34,7 +26,6 @@ class Device extends AbstractDevice
         return $this->brand;
     }
 
-
     /**
      * @return mixed
      */
@@ -42,7 +33,6 @@ class Device extends AbstractDevice
     {
         return $this->model;
     }
-
 
     /**
      * @return mixed
@@ -52,7 +42,6 @@ class Device extends AbstractDevice
         return $this->price;
     }
 
-
     /**
      * @return mixed
      */
@@ -60,7 +49,6 @@ class Device extends AbstractDevice
     {
         return $this->screenSize;
     }
-
 
     /**
      * @param $brand
@@ -75,18 +63,20 @@ class Device extends AbstractDevice
      */
     public function setType($type)
     {
-        $this->type = $type;
+        if (is_string($type)) {
+            $this->type = $type;
+        }
     }
-
 
     /**
      * @param $price
      */
     public function setPrice($price)
     {
-        $this->price = $price;
+        if (is_numeric($price)) {
+            $this->price = $price;
+        }
     }
-
 
     /**
      * @param $model
@@ -95,7 +85,6 @@ class Device extends AbstractDevice
     {
         $this->model = $model;
     }
-
 
     /**
      * @param $screenSize

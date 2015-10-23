@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: user
- * Date: 22.10.15
- * Time: 22:27
- */
-
 namespace Devices;
 
 class Notebooks extends Device {
@@ -46,7 +39,17 @@ class Notebooks extends Device {
         $this->operatingSystem = $operatingSystem;
     }
 
-    function __construct($type, $brand, $model, $price, $screenSize, $weight, $operatingSystem = 'none')
+    /**
+     * @param $type
+     * @param $brand
+     * @param $model
+     * @param $price
+     * @param $screenSize
+     * @param $weight
+     * @param string $operatingSystem
+     */
+    public function __construct($type, $brand, $model, $price, $screenSize,
+                                $weight, $operatingSystem = 'none')
     {
         $this->type = $type;
         $this->brand = $brand;
@@ -57,24 +60,19 @@ class Notebooks extends Device {
         $this->weight = $weight;
     }
 
+    /**
+     * @return string
+     */
     public function __toString()
     {
         $str = parent::__toString();
-        $str .= $this->getOperatingSystem() . "<br>\n";
-        $str .= $this->getWeight() . "<br>\n";
+        $str .= 'Operating system: '.$this->getOperatingSystem() . "<br>\n";
+        $str .= 'Weight: '.$this->getWeight() . "<br>\n";
 
         return $str;
     }
 
-    public function __set($property, $value)
-    {
-        $this->$property = $value;
-    }
 
-    public function __get($property)
-    {
-        return $this->$property;
-    }
 
 
 }

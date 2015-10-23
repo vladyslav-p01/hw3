@@ -10,8 +10,8 @@ namespace Devices;
 
 
 class Phones extends Device {
-    protected $communicationInterfaces = array('GSM');
 
+    protected $communicationInterfaces = array('GSM');
     protected $phoneFormFactor;
 
     /**

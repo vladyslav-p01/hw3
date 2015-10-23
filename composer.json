@@ -8,7 +8,9 @@
     ],
   "autoload": {
     "psr-4": {
-      "Devices\\": "src/Devices"
+      "Devices\\": "src/Devices",
+      "HomeDevices\\": "src/HomeDevices",
+      "Shopping\\": "src"
     }
   },
     "minimum-stability": "stable",

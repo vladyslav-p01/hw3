@@ -16,6 +16,9 @@ abstract class AbstractDevice
     abstract public function setPrice($price);
     abstract public function setScreenSize($screenSize);
 
+    /**
+     * @return string
+     */
     public function __toString()
     {
         $str = "Type of device: " . $this->getType() . "<br>\n";
@@ -27,4 +30,21 @@ abstract class AbstractDevice
         return $str;
     }
 
+    /**
+     * @param $property
+     * @param $value
+     */
+    public function __set($property, $value)
+    {
+        $this->$property = $value;
+    }
+
+    /**
+     * @param $property
+     * @return mixed
+     */
+    public function __get($property)
+    {
+        return $this->$property;
+    }
 }
