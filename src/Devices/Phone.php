@@ -9,7 +9,7 @@
 namespace Devices;
 
 
-class Phones extends Device {
+class Phone extends Device {
 
     protected $communicationInterfaces = array('GSM');
     protected $phoneFormFactor;

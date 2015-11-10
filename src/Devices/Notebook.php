@@ -1,7 +1,7 @@
 <?php
 namespace Devices;
 
-class Notebooks extends Device {
+class Notebook extends Device {
 
     protected $operatingSystem;
 

@@ -1,12 +1,12 @@
 <?php
 require 'vendor/autoload.php';
 
-use Devices\Phones;
-use Devices\Notebooks;
+use Devices\Phone;
+use Devices\Notebook;
 use HomeDevices\HomeDevice;
 use Shopping\ShoppingList;
 
-$LenovoG90 = new Phones();
+$LenovoG90 = new Phone();
 $LenovoG90->setType('Smartphone');
 $LenovoG90->setBrand('Lenovo');
 $LenovoG90->setModel('G90');
@@ -17,7 +17,7 @@ $LenovoG90->setPhoneFormFactor('touchscreen monoblock');
 echo $LenovoG90;
 echo "<br><br>";
 
-$AsusROG = new Notebooks('Notebook', 'Asus', 'ROG', 7000, '17.3', '4.5 kg');
+$AsusROG = new Notebook('Notebook', 'Asus', 'ROG', 7000, '17.3', '4.5 kg');
 echo $AsusROG;
 echo "<br><br>";
 $AsusROG->setModel('ROG G256 AX');
